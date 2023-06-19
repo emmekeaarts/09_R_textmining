@@ -1,7 +1,7 @@
 ---
 title: "Text Mining"
 params:
-  answers: true
+  answers: false
 mainfont: Arial
 fontsize: 12pt
 urlcolor: blue
@@ -11,7 +11,7 @@ output:
     toc_depth: 3
     toc_float: true
     theme: paper
-    pandoc_args: --output=R_text_mining_answers.html
+    pandoc_args: --output=R_text_mining.html
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +24,11 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 During this practical, we will cover an introduction to text mining. Topics covered are how to pre-process mined text (in both the tidy approach and using the `tm` package), different ways to visualize this the mined text, creating a document-term matrix and an introduction to one type of analysis you can conduct during text mining: text classification. As a whole, there are multiple ways to analysis mine & analyze text within `R`. However, for this practical we will discuss some of the techniques covered in the `tm` package and in the `tidytext` package, based upon the `tidyverse`. 
 
-You can download the student zip including all needed files for practical 9 [here](https://surfdrive.surf.nl/files/index.php/s/J58fxg4AkOSKTcK). In addition, for this practical, you will need the following packages:
+You can download the student zip including all needed files for lab 9 [here](https://surfdrive.surf.nl/files/index.php/s/HcgNgGoiILyUSXX).
+
+Note: the completed homework has to be **handed in** on Black Board and will be **graded** (pass/fail, counting towards your grade for assignment 2). The deadline is two hours before the start of your lab. Hand-in should be a **PDF** file. If you know how to knit pdf files, you can hand in the knitted pdf file. However, if you have not done this before, you are advised to knit to a html file as specified below, and within the html browser, 'print' your file as a pdf file. 
+
+For this practical, you will need the following packages:
 
 ```{r packages, message = FALSE, warning = FALSE, error = FALSE}
 # General Packages
